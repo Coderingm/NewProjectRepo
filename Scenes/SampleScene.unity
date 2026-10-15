@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 1174580070}
   - component: {fileID: 1174580069}
   - component: {fileID: 1174580071}
+  - component: {fileID: 1174580072}
   m_Layer: 0
   m_Name: bluebird
   m_TagString: Untagged
@@ -527,6 +528,33 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0dda78cd601e67d40b9c104480974e91, type: 3}
   - {fileID: 21300000, guid: 60e10a69e570b9341b005ca6dd0617cb, type: 3}
   - {fileID: 21300000, guid: 0dda78cd601e67d40b9c104480974e91, type: 3}
+--- !u!50 &1174580072
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174580068}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
