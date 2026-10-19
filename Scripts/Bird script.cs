@@ -10,9 +10,9 @@ public class Birdscript : MonoBehaviour
     [SerializeField] private Sprite[] birdsprites;
     private Rigidbody2D birdbody;
     float jump = 5f;
-    float cooldown = 2f;
-    float timer = 0f;
-    
+    float disabletimer = 0.5f;
+    float upperrotation = 20f;
+    float lowerrotation = 20f;
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,28 +26,26 @@ public class Birdscript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+     { 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            birdbody.velocity = (Vector2.up * jump);
-            birdbody.rotation = 20f;
-            timer += Time.deltaTime;
-        }
-        if (timer > cooldown)
-        {
-            birdbody.rotation = -20f;
-            timer = 0;
+            
         }
 
-        
     }
     private void Birdrendering()
-    {
+    {   // create animation for the flappy bird
         rendererindex++ ;
         if (rendererindex >= birdsprites.Length)
         {
             rendererindex = 0;
         }
-        birdrenderer.sprite = birdsprites[rendererindex];
+         birdrenderer.sprite = birdsprites[rendererindex];
+    }
+    private void pressSpace()
+    {
+
+        birdbody.velocity = (Vector2.up * jump);
+        birdbody.rotation = upperrotation;
     }
 }
